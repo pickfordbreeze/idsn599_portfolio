@@ -10,38 +10,57 @@
 <footer><a href="index.html#projects">Back to all projects</a></footer>
 </div>
 <script>
-/* Edit the text below. Replace [bracketed] placeholders with real details. */
+/* EDIT HERE. [Bracketed] text = fill in. Images: put a file path in the second slot, e.g. ["Caption","images/patch.jpg"]. Empty "" shows a placeholder. */
 var P={
-health:{tag:"AI + health data",title:"[Sleep & Recovery Insights Model]",sub:"A personalized readiness score that tells people what changed and what to do about it.",
- facts:[["My role","[Product manager / strategy lead]"],["Client role","[ML lead and product owner]"],["Timeline","[10 weeks]"],["Tools","[Python, PyTorch, Figma]"]],
- problem:"Wearables give people many numbers but little guidance. People need to know what their data means for them, and they need to trust the answer.",
- role:"I worked with the client as product partner. I ran user interviews, wrote the problem statement and success metrics, prioritized the roadmap, and kept research and design moving together.",
- deliverables:[["Working prototype","[A model that turns sleep, heart rate and activity data into a daily recovery score.]"],["Explainability layer","[Each score comes with plain-language reasons, so users see why it changed.]"],["Product requirements doc","[One document covering users, metrics, risks and scope.]"],["Evaluation report","[Accuracy results and a bias check across different user groups.]"]],
- skills:[["Machine learning on personal time-series data","The client builds and evaluates models, and knows when a result is not yet good enough to ship."],["Designing for trust","Privacy, clear explanations and honest uncertainty were built in from the start."],["Product judgment from the Iovine and Young Academy","The client moved from user insight to prototype quickly and tested it with real people."],["Lived understanding of why health data matters","A personal health experience shapes how the client frames every user problem."]],
- outcome:"[Add results: e.g. 12 pilot users, 85% said the explanations helped them act, model accuracy of X.]",learn:"[One honest lesson: what changed in the plan, and what you would do next.]"},
-research:{tag:"Research",title:"[Research Project Title]",sub:"Graduate research on [topic], taken from hypothesis to a result others can build on.",
- facts:[["My role","[Project manager / collaborator]"],["Client role","[Lead researcher]"],["Timeline","[1 semester]"],["Tools","[Python, PyTorch, LaTeX]"]],
- problem:"[State the research question in one or two plain sentences, and why it matters to real users.]",
- role:"I helped the client turn a research idea into a plan with milestones, scoped experiments, and a clear story for non-technical readers.",
- deliverables:[["Paper or thesis","[Title, venue or course, link.]"],["Experiments and code","[Reproducible repo with documented results.]"],["Presentation","[A talk that explained the work to a mixed audience.]"]],
- skills:[["Rigorous experimentation","The client designs tests, reads results critically, and reports what failed as well as what worked."],["Translating research into product","The client can explain a model’s limits to engineers, designers and users alike."],["Self-directed delivery","Milestones were met without needing to be chased."]],
- outcome:"[Add results, citations, or recognition.]",learn:"[One honest lesson.]"},
-honu:{tag:"Community + data",title:"[Mālama I Nā Honu Initiative]",sub:"Volunteer work that helps protect Hawaiʻi’s sea turtles through better data and community outreach.",
- facts:[["My role","[Advisor / product partner]"],["Client role","[Volunteer lead]"],["Timeline","[Ongoing]"],["Tools","[Spreadsheets, forms, social media]"]],
- problem:"[Describe the gap: e.g. sightings and nesting data scattered across notes, making it hard to plan protection and teach visitors.]",
- role:"I helped the client define who the users are (volunteers, staff and visitors), choose what to improve first, and measure whether it worked.",
- deliverables:[["Data tracking system","[A simple, consistent way to log sightings and nesting.]"],["Outreach materials","[Guides and posts that taught beachgoers how to keep turtles safe.]"],["Volunteer playbook","[Instructions that new volunteers can follow on day one.]"]],
- skills:[["Consistent commitment","The client shows up for the long run, on the beach and behind the scenes."],["Decisions from imperfect data","Competitive sailing taught the client to read conditions and adjust fast, a habit that carries into product work."],["Rooted in community","The client builds with the people who will use the work."]],
- outcome:"[Add results: volunteers trained, turtles logged, people reached.]",learn:"[One honest lesson.]"}};
-var k=new URLSearchParams(location.search).get("p"),d=P[k]||P.health;
+patch:{title:"A stick-on patch that reads stress from sweat",
+ sub:"A wearable product concept for the Iovine and Young Academy: from research to pitch deck, financial model and PRD.",
+ facts:[["My role","[Your role, e.g. product advisor]"],["Client role","[Product lead]"],["Context","USC Iovine and Young Academy venture course"],["Timeline","[Semester]"]],
+ hero:["Hero image: patch on the upper arm",""],
+ problem:["Stress affects sleep, focus and long-term health, but most people only guess at it. Today’s wearables infer stress indirectly, mainly from heart rate. We asked whether a more direct signal was possible, and whether people would wear it every day.",
+  "The concept is a disposable, stick-on patch worn on the upper arm. It collects the tiny amounts of sweat people produce through ordinary daily life, with no workout needed, and measures stress-specific biomarkers."],
+ role:"[Describe what you did: e.g. ran customer interviews, challenged assumptions, pushed the team to define success metrics, reviewed the PRD.]",
+ deliverables:[["Venture pitch deck","[The story: problem, product, market, business model, ask.]"],["Product ideation","[How the patch concept was chosen over other ideas, and the trade-offs considered.]"],["Financial spreadsheets","[Unit economics for a disposable product, pricing, and cost scenarios.]"],["Product requirements document","[Users, requirements, scope and open risks in one document.]"],["Research documentation","[User research, the science behind sweat biomarkers, and the competitive landscape.]"]],
+ gallery:[["Pitch deck slide",""],["Financial model screenshot",""],["Product sketch or PRD page",""]],
+ skills:[["Whole-product thinking","The client moved from user need, to science, to unit economics, to a pitch, and kept all of it consistent."],["Fluent in sensing technology","The client understands what a biosensor can and cannot measure, which keeps product claims honest."],["Venture-grade rigor","Financials, assumptions and risks were written down and tested, not just presented."],["Personal motivation","A personal health experience drives the client’s focus on putting useful data in people’s hands."]],
+ outcome:"[Add results: course feedback, grade, pitch outcome, advisor or judge quotes.]",learn:"[One honest lesson, e.g. an assumption that changed after research.]"},
+turtle:{title:"Helping field researchers sex sea turtles with machine learning",
+ sub:"A binary classifier built from a problem the client noticed while volunteering with Mālama I Nā Honu.",
+ facts:[["My role","[Your role]"],["Client role","Problem finder, data scientist, sole developer"],["Partner","Mālama I Nā Honu"],["Tools","[Python, scikit-learn]"]],
+ hero:["Hero image: sea turtle on a Hawaiian beach",""],
+ stats:[["95.9%","accuracy"],["0.992","ROC-AUC"],["4","classifiers compared"]],
+ problem:["Through volunteer work as a sea turtle conservationist, the client saw that field researchers struggled to tell the sex of young turtles by sight. Knowing sex ratios matters for conservation, so a reliable second opinion would help in the field.",
+  "The client asked a focused question: can simple body measurements, which researchers already take, be linked to sex and used as a supporting tool?"],
+ role:"[Describe what you did: e.g. helped frame the question and success criteria, and pushed for a result that field teams could actually use.]",
+ deliverables:[["Binary classifier","The client trained and compared four classifiers on turtle biometric measurements. Random forest performed best, with 95.9% accuracy and 0.992 ROC-AUC."],["Key finding","Tail and front flipper measurements showed a strong link to sex in young adult turtles."],["Field guidance","[A short, plain-language note on how researchers can use the result and where it should not be trusted.]"]],
+ gallery:[["Model comparison chart",""],["Measurement diagram",""],["Fieldwork photo",""]],
+ skills:[["Finds the real problem first","The client started from a field researcher’s difficulty, not from a model. That is product discovery."],["Applied ML with judgment","Four models were compared and the metrics were reported honestly."],["Technology that serves a mission","The result is designed as a supporting tool, which respects the experts using it."],["Rooted in place and community","The client works on the problem as someone who volunteers on these shores."]],
+ outcome:"[Add impact: adopted by the team? presented? published? next steps with more data.]",learn:"[One honest lesson, e.g. limits of the dataset or age group.]"},
+biosensor:{title:"Making sense of data from multiple wearables",
+ sub:"Graduate research on whether combining sensors tells people more than any single sensor, and how to explain what the numbers can’t.",
+ facts:[["My role","[Your role]"],["Client role","Graduate researcher"],["Advisor","[Professor name]"],["Status","In progress"]],
+ hero:["Hero image: wearable sensors and data",""],
+ problem:["Wearables report health data with confidence, but the numbers are less certain than they look. Two interstitial glucose monitors can give noticeably different readings, and both can differ from a fingerstick. The uncertainty is often 10–15%, yet people use these readings to make wellness decisions. Studies comparing devices are scarce.",
+  "The research asks three questions. Do signals such as nighttime glucose and heart rate variability together say more about stress than either alone? How much do devices disagree when measuring the same thing? And how should products communicate those limits to consumers?"],
+ role:"[Describe what you did: e.g. helped scope the two deliverables, defined the target user, and shaped the strategy deck.]",
+ deliverables:[["ML pipeline and research paper","Uses an existing dataset to test whether combining wearable signals improves inference compared with using each signal alone."],["Product MVP","A prototype that puts wellness wearable data in context, with the client’s own data used for a first demonstration."],["MRD and PRD","Documents defining user needs, requirements and assumptions about viability."],["Strategy deck","Builds on the MRD and PRD: user needs, competitive landscape, and where the industry is heading."]],
+ gallery:[["Sensor comparison plot",""],["MVP screen",""],["Strategy deck slide",""]],
+ skills:[["Deep knowledge of how sensors work","The client reviews how these devices collect data, which is the basis for explaining their limits honestly."],["Sensor fusion and applied ML","Combining signals is a research question the client can answer with a real pipeline."],["Communicating uncertainty","The client treats “how sure are we?” as a product feature, not a footnote."],["Research to product","Findings go straight into an MVP and strategy, so insight turns into something people can use."],["Uses own data","The client builds the demo on their own wellness data, so the problem is personal."]],
+ outcome:"[Add progress: dataset chosen, early results, draft status, expected completion.]",learn:"[One honest lesson so far.]"}};
+var k=new URLSearchParams(location.search).get("p"),d=P[k]||P.patch;
 function e(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;")}
+function im(a,c){return a[1]?'<img class="img'+(c?" "+c:"")+'" src="'+e(a[1])+'" alt="'+e(a[0])+'">':'<div class="img'+(c?" "+c:"")+'">'+e(a[0])+"</div>"}
+function box(x){return'<div class="box"><h3>'+e(x[0])+"</h3><p>"+e(x[1])+"</p></div>"}
 document.title=d.title+" — [Client Name]";
-var h='<header class="phead"><span class="tag">'+e(d.tag)+'</span><h1>'+e(d.title)+'</h1><p class="lede">'+e(d.sub)+'</p></header>';
+var h='<header class="phead"><h1>'+e(d.title)+'</h1><p class="lede">'+e(d.sub)+"</p></header>";
+h+=im(d.hero,"hero-img");
 h+='<div class="facts">'+d.facts.map(function(f){return"<div><b>"+e(f[0])+"</b>"+e(f[1])+"</div>"}).join("")+"</div>";
-h+='<section class="sec"><h2>The problem</h2><p>'+e(d.problem)+"</p></section>";
+h+='<section class="sec"><h2>The problem</h2>'+d.problem.map(function(t){return"<p>"+e(t)+"</p>"}).join("");
+if(d.stats)h+='<div class="stats">'+d.stats.map(function(s){return"<div><b>"+e(s[0])+"</b>"+e(s[1])+"</div>"}).join("")+"</div>";
+h+="</section>";
 h+='<section class="sec"><h2>My role</h2><p>'+e(d.role)+"</p></section>";
-h+='<section class="sec"><h2>What the client delivered</h2>'+d.deliverables.map(function(x){return'<div class="box"><h3>'+e(x[0])+"</h3><p>"+e(x[1])+"</p></div>"}).join("")+"</section>";
-h+='<section class="sec"><h2>What sets the client apart</h2>'+d.skills.map(function(x){return'<div class="box"><h3>'+e(x[0])+"</h3><p>"+e(x[1])+"</p></div>"}).join("")+"</section>";
+h+='<section class="sec"><h2>What the client delivered</h2>'+d.deliverables.map(box).join("")+"</section>";
+h+='<div class="gallery">'+d.gallery.map(function(g){return"<figure>"+im(g)+"<figcaption>"+e(g[0])+"</figcaption></figure>"}).join("")+"</div>";
+h+='<section class="sec"><h2>What sets the client apart</h2>'+d.skills.map(box).join("")+"</section>";
 h+='<section class="sec"><h2>Outcome</h2><p>'+e(d.outcome)+"</p><h2>What we learned</h2><p>"+e(d.learn)+'</p><p><a class="btn" href="mailto:you@email.com">Get in touch</a></p></section>';
 document.getElementById("root").innerHTML=h;
 </script></body></html>
