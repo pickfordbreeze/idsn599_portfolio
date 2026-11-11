@@ -46,20 +46,20 @@ biosensor:{title:"Making sense of data from multiple wearables",
  gallery:[["Sensor comparison plot",""],["MVP screen",""],["Strategy deck slide",""]],
  skills:[["Deep knowledge of how sensors work","The client reviews how these devices collect data, which is the basis for explaining their limits honestly."],["Sensor fusion and applied ML","Combining signals is a research question the client can answer with a real pipeline."],["Communicating uncertainty","The client treats “how sure are we?” as a product feature, not a footnote."],["Research to product","Findings go straight into an MVP and strategy, so insight turns into something people can use."],["Uses own data","The client builds the demo on their own wellness data, so the problem is personal."]],
  outcome:"[Add progress: dataset chosen, early results, draft status, expected completion.]",learn:"[One honest lesson so far.]"}};
-var k=new URLSearchParams(location.search).get("p"),d=P[k]||P.patch;
+var k=new URLSearchParams(location.search).get("p");if(!P[k])k="patch";var d=P[k];
 function e(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;")}
 function im(a,c){return a[1]?'<img class="img'+(c?" "+c:"")+'" src="'+e(a[1])+'" alt="'+e(a[0])+'">':'<div class="img'+(c?" "+c:"")+'">'+e(a[0])+"</div>"}
 function box(x){return'<div class="box"><h3>'+e(x[0])+"</h3><p>"+e(x[1])+"</p></div>"}
 document.title=d.title+" — [Client Name]";
 var h='<header class="phead"><h1>'+e(d.title)+'</h1><p class="lede">'+e(d.sub)+"</p></header>";
-h+=im(d.hero,"hero-img");
+h+=im([d.hero[0],"images/"+k+"-hero.jpg"],"hero-img");
 h+='<div class="facts">'+d.facts.map(function(f){return"<div><b>"+e(f[0])+"</b>"+e(f[1])+"</div>"}).join("")+"</div>";
 h+='<section class="sec"><h2>The problem</h2>'+d.problem.map(function(t){return"<p>"+e(t)+"</p>"}).join("");
 if(d.stats)h+='<div class="stats">'+d.stats.map(function(s){return"<div><b>"+e(s[0])+"</b>"+e(s[1])+"</div>"}).join("")+"</div>";
 h+="</section>";
 h+='<section class="sec"><h2>My role</h2><p>'+e(d.role)+"</p></section>";
 h+='<section class="sec"><h2>What the client delivered</h2>'+d.deliverables.map(box).join("")+"</section>";
-h+='<div class="gallery">'+d.gallery.map(function(g){return"<figure>"+im(g)+"<figcaption>"+e(g[0])+"</figcaption></figure>"}).join("")+"</div>";
+h+='<div class="gallery">'+d.gallery.map(function(g,i){return"<figure>"+im([g[0],"images/"+k+"-"+(i+1)+".jpg"])+"<figcaption>"+e(g[0])+"</figcaption></figure>"}).join("")+"</div>";
 h+='<section class="sec"><h2>What sets the client apart</h2>'+d.skills.map(box).join("")+"</section>";
 h+='<section class="sec"><h2>Outcome</h2><p>'+e(d.outcome)+"</p><h2>What we learned</h2><p>"+e(d.learn)+'</p><p><a class="btn" href="mailto:you@email.com">Get in touch</a></p></section>';
 document.getElementById("root").innerHTML=h;
