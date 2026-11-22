@@ -77,3 +77,27 @@ figure.shot{margin:22px 0}figure.shot figcaption{font-size:.9rem;color:var(--mut
 @media(max-width:700px){.two{grid-template-columns:1fr}.row{grid-template-columns:110px 1fr 56px}}
 tr.best td{font-weight:700;color:var(--sea)}
 .note{font-size:.95rem;color:var(--mute)}
+
+/* ---- home page redesign ---- */
+.home-hero{display:grid;grid-template-columns:280px 1fr;gap:48px;align-items:center;padding:48px 0 40px}
+.home-hero .headshot{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:6px}
+.home-hero h1{max-width:none;font-size:clamp(2.8rem,7vw,5rem);margin:0 0 6px}
+.role{font:600 clamp(1.3rem,3vw,1.8rem)/1.2 "Bricolage Grotesque",system-ui,sans-serif;color:var(--sea);margin:0 0 18px}
+.home-hero .lede{margin:0 0 26px}
+.hero-links{display:flex;flex-wrap:wrap;align-items:center;gap:14px;font:600 1rem "Bricolage Grotesque",system-ui,sans-serif}
+.hero-links .sep{color:var(--line)}
+.hero-links .btn.alt{background:transparent;color:var(--ink);border:2px solid var(--ink);padding:10px 20px}
+
+.projects{border-top:1px solid var(--line)}
+.projects .card .img{object-fit:cover}
+
+.offclock{display:grid;grid-template-columns:1.1fr 1fr;gap:44px;align-items:center;padding:56px 0 80px;border-top:1px solid var(--line)}
+.offclock img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:6px}
+.offclock h2{margin-bottom:14px}
+.offclock p{margin:0;max-width:52ch}
+
+@media(max-width:700px){
+  .home-hero{grid-template-columns:1fr;gap:24px}
+  .home-hero .headshot{max-width:240px}
+  .offclock{grid-template-columns:1fr;gap:24px}
+}
