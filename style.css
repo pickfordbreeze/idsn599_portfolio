@@ -17,7 +17,7 @@ h1{font-size:clamp(2.6rem,7vw,5rem);line-height:1.02;letter-spacing:-.03em;margi
 .about{display:grid;grid-template-columns:1fr 1fr;gap:40px;padding:48px 0;border-top:1px solid var(--line)}
 .about p{margin:0 0 1em}
 h2{font-size:2rem;letter-spacing:-.02em;margin:0 0 20px}
-.projects{padding:48px 0 80px;border-top:1px solid var(--line)}
+.projects{padding:24px 0 56px}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
 .card{display:block;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:26px;color:inherit;text-decoration:none;transition:transform .2s,border-color .2s}
 .card:hover{transform:translateY(-3px);border-color:var(--sea)}
@@ -88,10 +88,9 @@ tr.best td{font-weight:700;color:var(--sea)}
 .hero-links .sep{color:var(--line)}
 .hero-links .btn.alt{background:transparent;color:var(--ink);border:2px solid var(--ink);padding:10px 20px}
 
-.projects{border-top:1px solid var(--line)}
 .projects .card .img{object-fit:cover}
 
-.offclock{display:grid;grid-template-columns:1.1fr 1fr;gap:44px;align-items:center;padding:56px 0 80px;border-top:1px solid var(--line)}
+.offclock{display:grid;grid-template-columns:1.1fr 1fr;gap:44px;align-items:center;padding:56px 0 80px}
 .offclock img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:6px}
 .offclock h2{margin-bottom:14px}
 .offclock p{margin:0;max-width:52ch}
@@ -117,3 +116,19 @@ tr.best td{font-weight:700;color:var(--sea)}
 .doc-links{display:flex;flex-wrap:wrap;gap:12px;margin:18px 0 0}
 .doc-links .btn{padding:11px 20px}
 .doc-links .btn.alt{background:transparent;color:var(--ink);border:2px solid var(--ink);padding:9px 18px}
+
+/* ---- compact home cards ---- */
+.projects h2{font-size:1.7rem;margin-bottom:14px}
+.card{padding:18px}
+.card .img{aspect-ratio:16/7;margin:-18px -18px 12px;width:calc(100% + 36px)}
+.card h3{font-size:1.15rem;margin:0 0 6px}
+.card p{font-size:.92rem;line-height:1.45;margin:0}
+
+/* ---- project pages: full-width top banner + stacked key facts ---- */
+body>.banner{margin:0}
+body>.banner img{aspect-ratio:auto;height:clamp(150px,26vw,300px);border-radius:0}
+.facts{grid-template-columns:1fr;gap:22px}
+.facts>div{font-size:1.35rem;line-height:1.5;max-width:720px}
+.facts b{font-size:.85rem;margin-bottom:2px}
+.facts .grade{display:inline-block;justify-self:start;background:var(--sun);color:#0b2b3a;padding:10px 20px;border-radius:10px;font:800 1.6rem/1.2 "Bricolage Grotesque",system-ui,sans-serif}
+.facts .grade b{color:#0b2b3a;font-size:.85rem;font-weight:600}
