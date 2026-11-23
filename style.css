@@ -17,7 +17,7 @@ h1{font-size:clamp(2.6rem,7vw,5rem);line-height:1.02;letter-spacing:-.03em;margi
 .about{display:grid;grid-template-columns:1fr 1fr;gap:40px;padding:48px 0;border-top:1px solid var(--line)}
 .about p{margin:0 0 1em}
 h2{font-size:2rem;letter-spacing:-.02em;margin:0 0 20px}
-.projects{padding:24px 0 56px}
+.projects{padding:8px 0 56px}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
 .card{display:block;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:26px;color:inherit;text-decoration:none;transition:transform .2s,border-color .2s}
 .card:hover{transform:translateY(-3px);border-color:var(--sea)}
@@ -28,7 +28,7 @@ h2{font-size:2rem;letter-spacing:-.02em;margin:0 0 20px}
 .phead{padding:48px 0 32px}.phead h1{max-width:20ch;font-size:clamp(2.2rem,5.5vw,4rem)}
 .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0;margin-bottom:8px}
 .facts b{display:block;font:600 .9rem "Bricolage Grotesque",sans-serif;color:var(--sea)}
-.sec{padding:44px 0;max-width:720px}.sec h2{margin-bottom:14px}
+.sec{padding:22px 0;max-width:720px}.sec h2{margin-bottom:14px}
 .box{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--sea);border-radius:6px;padding:20px 24px;margin:0 0 16px}
 .box h3{margin:0 0 6px;font-size:1.15rem}.box p{margin:0}
 .btn{display:inline-block;background:var(--ink);color:var(--bg);padding:12px 22px;border-radius:99px;text-decoration:none;font-weight:600}
@@ -79,7 +79,7 @@ tr.best td{font-weight:700;color:var(--sea)}
 .note{font-size:.95rem;color:var(--mute)}
 
 /* ---- home page redesign ---- */
-.home-hero{display:grid;grid-template-columns:280px 1fr;gap:48px;align-items:center;padding:48px 0 40px}
+.home-hero{display:grid;grid-template-columns:280px 1fr;gap:48px;align-items:center;padding:48px 0 16px}
 .home-hero .headshot{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:6px}
 .home-hero h1{max-width:none;font-size:clamp(2.8rem,7vw,5rem);margin:0 0 6px}
 .role{font:600 clamp(1.3rem,3vw,1.8rem)/1.2 "Bricolage Grotesque",system-ui,sans-serif;color:var(--sea);margin:0 0 18px}
@@ -107,7 +107,7 @@ tr.best td{font-weight:700;color:var(--sea)}
 .quote{margin:32px 0 8px;padding:6px 0 6px 24px;border-left:5px solid var(--sun);max-width:720px}
 .quote p{margin:0;font:italic 400 1.5rem/1.45 "Newsreader",Georgia,serif}
 .quote cite{display:block;margin-top:10px;font:600 .95rem "Bricolage Grotesque",sans-serif;font-style:normal;color:var(--mute)}
-.split{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:40px;align-items:start;padding:44px 0}
+.split{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:40px;align-items:start;padding:24px 0}
 .split img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:6px}
 .split h2{margin-bottom:14px}.split p{margin:0 0 1em}
 @media(max-width:700px){.split{grid-template-columns:1fr;gap:24px}.split img{aspect-ratio:3/2}}
@@ -120,7 +120,7 @@ tr.best td{font-weight:700;color:var(--sea)}
 /* ---- compact home cards ---- */
 .projects h2{font-size:1.7rem;margin-bottom:14px}
 .card{padding:18px}
-.card .img{aspect-ratio:16/7;margin:-18px -18px 12px;width:calc(100% + 36px)}
+.card .img{aspect-ratio:16/6;margin:-18px -18px 12px;width:calc(100% + 36px)}
 .card h3{font-size:1.15rem;margin:0 0 6px}
 .card p{font-size:.92rem;line-height:1.45;margin:0}
 
@@ -132,3 +132,15 @@ body>.banner img{aspect-ratio:auto;height:clamp(150px,26vw,300px);border-radius:
 .facts b{font-size:.85rem;margin-bottom:2px}
 .facts .grade{display:inline-block;justify-self:start;background:var(--sun);color:#0b2b3a;padding:10px 20px;border-radius:10px;font:800 1.6rem/1.2 "Bricolage Grotesque",system-ui,sans-serif}
 .facts .grade b{color:#0b2b3a;font-size:.85rem;font-weight:600}
+
+/* ---- centered "Project highlights" heading with side rules ---- */
+.projects h2{display:flex;align-items:center;justify-content:center;gap:20px;text-align:center}
+.projects h2::before,.projects h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+/* ---- project pages: one divider (below testimonial), nav over banner ---- */
+.facts{border:0;padding:8px 0 0}
+.rule{border:0;border-top:1px solid var(--line);margin:32px 0 0}
+body>.banner{position:relative}
+body>.banner::after{content:"";position:absolute;inset:0 0 auto 0;height:120px;background:linear-gradient(to bottom,rgba(0,0,0,.55),transparent);pointer-events:none}
+body>.banner~.wrap>.nav{position:absolute;top:0;left:0;right:0;max-width:1000px;margin:0 auto;padding:22px 24px;z-index:2}
+body>.banner~.wrap>.nav a{color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.5)}
