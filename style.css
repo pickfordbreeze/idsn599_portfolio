@@ -112,3 +112,8 @@ tr.best td{font-weight:700;color:var(--sea)}
 .split img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:6px}
 .split h2{margin-bottom:14px}.split p{margin:0 0 1em}
 @media(max-width:700px){.split{grid-template-columns:1fr;gap:24px}.split img{aspect-ratio:3/2}}
+
+/* ---- project links ---- */
+.doc-links{display:flex;flex-wrap:wrap;gap:12px;margin:18px 0 0}
+.doc-links .btn{padding:11px 20px}
+.doc-links .btn.alt{background:transparent;color:var(--ink);border:2px solid var(--ink);padding:9px 18px}
