@@ -1,45 +1,42 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"><title>Using ML to Save my Hometown Sea Turtles — Breeze Pickford</title>
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<html lang="en"><head><title>Using ML to Save my Hometown Sea Turtles — Breeze Pickford</title>
 <meta name="description" content="A predictive machine learning model for sea turtle sexing, built from eight years of volunteering with Mālama I Nā Honu. 95.9% accuracy on the test set.">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;800&family=Newsreader:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css"></head><body>
-<figure class="banner"><img src="images/turtle-banner.jpg" alt="Project banner: sea turtle sexing with machine learning"></figure>
-<div class="wrap">
-<nav class="nav"><a href="index.html">Breeze Pickford</a><span><a href="index.html">Go back home</a></span></nav>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="project.css"></head>
+<body><div class="wrap">
+<header class="bar"><a class="name" href="index.html">Breeze Pickford</a><a class="back" href="index.html">Back to Home</a></header>
 <main>
-<header class="phead"><h1>Using ML to Save my Hometown Sea Turtles</h1></header>
-
-<div class="facts">
-<div><b>Project context</b>Developing a Predictive ML Model for Sea Turtle Sexing in the Pursuit of Wildlife Conservation</div>
-<div><b>Role</b>Technical Product Engineer</div>
-<div class="grade"><b>Grade</b>A</div></div>
-
-<blockquote class="quote"><p>“Breeze was able to take the project past pure engineering to turn her observations into a useful product for a good cause.”</p><cite>Supervisor testimonial</cite></blockquote>
-<hr class="rule">
-
-<section class="split">
-<img src="images/handson-turtle.jpg" alt="Breeze working hands-on with a sea turtle" loading="lazy">
-<div><h2>The inspiration</h2>
-<p>I have volunteered for the non-profit, Mālama I Nā Honu, for eight years. This organization is dedicated to the conservation of the Hawaiian Green Sea Turtle. At first, my assistance to this cause was solely hands-on: I aided in turtle medical assistance, spoke at educational initiatives to crowds of hundreds, and worked in the field to collect and analyze basking data.</p>
-<p>Then I noticed a recurring problem: Deciding a living turtle’s sex by eye is hard. Their reproductive organs are internal, researchers often observe from a great distance, and the practice has historically relied on passed down tips and tricks without concrete metrics to differentiate.</p></div>
+<section class="hero">
+<div><h1>Using ML to Save my Hometown Sea Turtles</h1>
+<p>Developing a Predictive Model for Sea Turtle Sexing in the Pursuit of Wildlife Conservation</p>
+<p class="meta role">Role: Technical Product Engineer</p></div>
+<figure><img src="images/turtle-hero.jpg" alt="A green sea turtle surfacing in clear water"><figcaption>Photo I took during Field Data Collection</figcaption></figure>
 </section>
 
-<section class="sec"><h2>Why sexing data</h2>
-<p>Aside from general population data, accurate sexing is the first step in identifying individuals. Researchers sort by sex and age, then match facial scale patterns and scars. A wrong call early on makes every later match harder.</p></section>
+<section><h2>Backstory + Problem Discovery</h2>
+<p>I have volunteered for the non-profit, Mālama I Nā Honu, for eight years. This organization is dedicated to the conservation of the Hawaiian Green Sea Turtle. At first, my assistance to this cause was solely hands-on: I aided in turtle medical assistance, spoke at educational initiatives to crowds of hundreds, and worked in the field to collect and analyze basking data.</p>
+<p>Then I noticed a recurring problem: Deciding a living turtle’s sex by eye is hard. Their reproductive organs are internal, researchers often observe from a great distance, and the practice has historically relied on passed down tips and tricks without concrete metrics to differentiate.</p></section>
 
-<section class="sec"><h2>What this changes</h2>
-<p>Knowing which measurements actually carry a reliable signal for sex in a specific species allows researchers to collect data both more accurately, and more efficiently. Better data improves conservation efforts, and more efficient collection will mean limited conservation funds do more.</p></section>
+<section class="split">
+<figure><img src="images/turtle-onsite.jpg" alt="Volunteers and visitors on a beach with resting sea turtles" loading="lazy"><figcaption>On-site Day</figcaption></figure>
+<div><h2>Why Sexing Data?</h2>
+<p>Aside from general population data, accurate sexing is the first step in identifying individuals. Researchers sort by sex and age, then match facial scale patterns and scars. A wrong call early on makes every later match harder.</p>
+<p>Knowing which measurements actually carry a reliable signal for sex in a specific species allows researchers to collect data both more accurately, and more efficiently.</p>
+<p class="key">Better data improves conservation efforts, and more efficient collection will mean limited conservation funds do more.</p></div>
+</section>
 
-<section class="sec"><h2>The product</h2>
+<blockquote class="quote teal"><div><p>“Breeze was able to take the project past pure engineering to turn her observations into a useful product for a good cause.”</p><cite>Philanthropic supervisor</cite></div></blockquote>
+
+<section><h2>The Product</h2>
 <p>I developed a machine learning prototype that predicts sea turtle sex from physical measurements and investigates which characteristics offer the most useful evidence for classification.</p>
-<p>Much of the work involved making inconsistently recorded existing data sets usable. I built a preprocessing pipeline to standardize measurements, handle missing values, and convert text entries into numerical features. I then developed and compared four classifiers, including a Multilayer Perceptron neural network.</p>
-<p>The strongest model, achieved 95.9% accuracy on the project’s test set. Beyond classification, the analysis revealed that relationships between certain measurements and sex varied across weight categories. This suggested that the usefulness of familiar identification cues, such as tail length, depends partly on the size of the animal being assessed.</p>
+<p>Much of the work involved making inconsistently recorded existing data sets usable. I built a preprocessing pipeline to standardize measurements, handle missing values, and convert text entries into numerical features. I then developed and compared four classifiers, including a Multilayer Perceptron Neural Network.</p>
+<p>The strongest model achieved 95.9% accuracy on the project’s test set. Beyond classification, the analysis revealed that relationships between certain measurements and sex varied across weight categories. This suggested that the usefulness of familiar identification cues, such as tail length, depends partly on the size of the animal being assessed.</p>
 <p>I presented the results to a panel of conservation scientists as an actionable MVP that could help researchers prioritize informative measurements and estimate sex when records are incomplete.</p></section>
 
-<section class="sec"><h2>Reflection</h2>
-<p>My engineering skills and product development knowledge, combined with my unique experiences help me identify inconspicuous ways to harness new technology. I try to take this approach through all my problem solving endeavors. All in all, I continually find that where there’s data, there’s something innovative that can be made.</p>
-<p><a class="btn" href="index.html#projects">Back to all projects</a></p></section>
+<section><h2>Reflection</h2>
+<p>My engineering skills and product development knowledge, combined with my unique experiences, help me identify inconspicuous ways to harness new technology. I try to take this approach through all my problem solving endeavors. All in all, I continually find that where there’s data, there’s something innovative that can be made.</p></section>
 </main>
+<footer class="bar foot"><a class="name" href="index.html">Breeze Pickford</a><a class="back" href="index.html">Back to Home</a></footer>
 </div></body></html>
